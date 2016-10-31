@@ -1,0 +1,43 @@
+---
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Freenet - {{ page.title }}</title>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/bebas.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/ptsans.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/social.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/content.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/toc.css" />
+		{% assign page.i18n = site.data.lang[page.lang] %}
+	</head>
+	<body>
+	<div>
+		<aside class="social">
+			<a href="https://facebook.com">Facebook</a>
+			<a href="https://twitter.com">Twitter</a>
+			<a href="https://instagram.com">Instagram</a>
+			<a href="https://youtube.com">Youtube</a>
+			<a href="https://pinterest.com">Pinterest</a>
+			<a href="https://plus.google.com">Google+</a>
+		</aside>
+		<nav>
+			<a href="{{ site.baseurl }}/">Freenet</a>
+			<a href="{{ site.baseurl }}/about/">About</a>
+			<a href="{{ site.baseurl }}/download/">Download</a>
+			<a href="{{ site.baseurl }}/learn/">Learn</a>
+			<a href="{{ site.baseurl }}/donate/">Donate</a>
+			<a href="{{ site.baseurl }}/volunteer/">Volunteer</a>
+		</nav>
+	</div>
+	<main>
+		<!-- FIXME: Ensure this works on github -->
+		<header>
+			<h1>{{ page.title }}</h1>
+		</header>
+		{{ content }}
+	</main>
+
+	{% include footer.html %}
+	</body>
+</html>

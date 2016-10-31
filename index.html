@@ -1,166 +1,120 @@
+---
+---
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<script src="https://use.typekit.net/ldd3fpw.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style/raw.css" />
+		<title>Freenet</title>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/bebas.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/ptsans.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/social.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/content.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/landing.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style/toc.css" />
 	</head>
 	<body>
 	<div>
+		<aside class="social">
+			<a href="https://facebook.com">Facebook</a>
+			<a href="https://twitter.com">Twitter</a>
+			<a href="https://instagram.com">Instagram</a>
+			<a href="https://youtube.com">Youtube</a>
+			<a href="https://pinterest.com">Pinterest</a>
+			<a href="https://plus.google.com">Google+</a>
+		</aside>
 		<nav>
-			<a href="#">Freenet</a>
-			<a href="#">About</a>
-			<a href="#">Download</a>
-			<a href="#">Learn</a>
-			<a href="#">Donate</a>
-			<a href="#">Volunteer</a>
+			<a href="{{ site.baseurl }}/">Freenet</a>
+			<a href="{{ site.baseurl }}/about/">About</a>
+			<a href="{{ site.baseurl }}/download/">Download</a>
+			<a href="{{ site.baseurl }}/learn/">Learn</a>
+			<a href="{{ site.baseurl }}/donate/">Donate</a>
+			<a href="{{ site.baseurl }}/volunteer/">Volunteer</a>
 		</nav>
 		<header>
 			<h1>Freenet</h1>
 			<p>Browse websites, post on forums, and publish files within Freenet with strong privacy protections.</p>
 		</header>
-		<aside class="social">
-			<a href="#">Facebook</a>
-			<a href="#">Twitter</a>
-			<a href="#">Instagram</a>
-			<a href="#">Youtube</a>
-			<a href="#">Pinterest</a>
-			<a href="#">Google+</a>
-		</aside>
 		<section id="actions">
 			<div>
 				<h2>Download</h2>
-				<p>Lorem Ipsum dolor sit amet</p>
-				<a href="#">Learn More</a>
+				<p>Get the software</p>
+				<a href="{{ site.baseurl }}/download/">Learn More</a>
 			</div>
 			<div>
 				<h2>Learn</h2>
-				<p>Lorem Ipsum dolor sit amet</p>
-				<a href="#">Learn More</a>
+				<p>Learn to protect your privacy</p>
+				<a href="{{ site.baseurl }}/learn/">Learn More</a>
 			</div>
 			<div>
 				<h2>Donate</h2>
-				<p>Lorem Ipsum dolor sit amet</p>
-				<a href="#">Learn More</a>
+				<p>Give to protect online privacy and internet freedom</p>
+				<a href="{{ site.baseurl }}/donate/">Learn More</a>
 			</div>
 			<div>
 				<h2>Contribute</h2>
-				<p>Lorem Ipsum dolor sit amet</p>
-				<a href="#">Learn More</a>
+				<p>Work to protect online privacy and internet freedom</p>
+				<a href="{{ site.baseurl }}/volunteer/">Learn More</a>
 			</div>
 		</section>
 
 		<a href="#" id="more">More</a>
 	</div>
+	<div>
 	<section id="whatsfreenet">
 		<h2>What's Freenet</h2>
 		<p>Freenet is a peer-to-peer platform for censorship-resistant communication and publishing.</p>
 
-		<a href="#">Download</a>
+		<a href="{{ site.baseurl }}/download/">Download</a>
 		<!-- TODO: "Use your freenet platform" -->
 	</section>
 
 	<section id="features">
 		<h2>Freenet Features</h2>
-		<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+		<p>Browse websites, post on forums, and publish files within Freenet with strong privacy protections.</p>
 
 		<ul>
 			<li>
-			<h3>Secret Identity</h3>
-			<p>Create yours so nobody knows who you are</p>
+			        <h3>Secret Identity</h3>
+			        <p>Create yours so nobody knows who you are</p>
 			</li>
 			<li>
-			<h3>Browse Websites</h3>
-			<p>Freenet is home to sites ranging from programming to sustainable living</p>
+			        <h3>Browse Websites</h3>
+			        <p>Freenet is home to sites ranging from programming to sustainable living</p>
 			</li>
 			<li>
-			<h3>Forums</h3>
-			<p>Ask questions and exchange ideas</p>
+			        <h3>Forums</h3>
+			        <p>Ask questions and exchange ideas</p>
 			</li>
 			<li>
-			<h3>Platform</h3>
-			<p>Build your own decentralized application on the Freenet platform</p>
+			        <h3>Platform</h3>
+			        <p>Build your own decentralized application on the Freenet platform</p>
 			</li>
 		</ul>
 	</section>
 
 	<section id="news">
 		<h2>What's New</h2>
-		<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+		<p>News about Freenet, internet freedom and privacy rights.</p>
 
 		<ol>
+                    {% for post in site.posts limit: 4 %}
 			<li>
-				<h3>News Title Here</h3>
-				<time>2016-06-25</time>
-				<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-				<a href="#">Details</a>
+                        	<h3>{{ post.title | escape }}</h3>
+                        	<time>{{ post.date | date: "%Y-%m-%d" }}</time>
+				<p>{{ post.content | strip_html | truncatewords:40}}</p>
+				<a href="{{ post.url | prepend: site.baseurl }}">Details</a>
 			</li>
-			<li>
-				<h3>News Title Here</h3>
-				<time>2016-06-25</time>
-				<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-				<a href="#">Details</a>
-			</li>
-			<li>
-				<h3>News Title Here</h3>
-				<time>2016-06-25</time>
-				<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-				<a href="#">Details</a>
-			</li>
-			<li>
-				<h3>News Title Here</h3>
-				<time>2016-06-25</time>
-				<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-				<a href="#">Details</a>
-			</li>
-			<li>
-				<h3>News Title Here</h3>
-				<time>2016-06-25</time>
-				<p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-				<a href="#">Details</a>
-			</li>
+                    {% endfor %}
 		</ol>
 	</section>
-	<section>
+	<section id="testimonials">
 		<h2>Testimonials</h2>
 		<blockquote>
 			I worry about my child and the Internet all the time, even though she's too young to have logged on yet. Here's what I worry about. I worry that 10 or 15 years from now, she will come to me and say <q>Daddy, where were you when they took  freedom of the press away from the Internet</q>
 		</blockquote>
 		<cite><a href="https://twitter.com/sfmnemonic" class="author" rel="author">Mike Godwin</a> / <a href="https://eff.org" class="organization">Electronic Freedom Foundation</a></cite>
 	</section>
+	</div>
 
-	<footer>
-		<h2>Freenet</h2>
-		<p>Navigate with Freedom</p>
-
-		<!-- FIXME what goes here? -->
-		<form id="newsletter">
-			<input name="email"></input>
-			<input type="submit" value="Subscribe">
-		</form>
-
-		<div id="contact">
-			<a href="mailto:press@freenetproject.org">press@freenetproject.org</a>
-			<a href="mailto:support@freenetproject.org">support@freenetproject.org</a>
-			IRC: <a href="http://webchat.freenode.net/?randomnick=1&channels=%23freenet&uio=d4">#freenet</a> on chat.freenode.net
-		</div>
-		
-		<ul class="social">
-			<a href="#">Facebook</a>
-			<a href="#">Twitter</a>
-			<a href="#">Instagram</a>
-			<a href="#">Youtube</a>
-			<a href="#">Pinterest</a>
-			<a href="#">Google+</a>
-			<ul class="stats">
-				<li>1290 Followers</li>
-				<li>| 26900 Visitors</li> <!-- FIXME -->
-				<li>| 5900 Likes</li>
-			</ul>
-		</ul>
-		<p>&copy; Copyright The Freenet Project Inc. | All Rights Reserved</p>
-	</footer>
+	{% include footer.html %}
 	</body>
 </html>

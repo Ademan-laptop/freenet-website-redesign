@@ -1,0 +1,110 @@
+---
+---
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/style/donate.css">
+<div class="formgroup">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<h4 class="panel-title">Become a member</h4>
+		<h5 style="color:black">Choose your monthly donation:</h5>
+		<input type="hidden" name="cmd" value="_xclick-subscriptions">
+		<input type="hidden" name="business" value="ian@freenetproject.org">
+		<input type="hidden" name="item_name" value="Freenet Project Membership">
+		<input type="hidden" name="return" value="https://freenetproject.org/donatethanks.html">
+		<input type="hidden" name="cancel_return" value="https://freenetproject.org/donate.html">
+		<input type="hidden" name="no_shipping" value="1">
+		<input type="hidden" name="no_note" value="1">
+		<input type="hidden" name="currency_code" value="USD">
+		<fieldset>
+			<input id="usd50" type="radio" name="a3" value="50.00">
+			<label for="usd50">$50
+			</label><input id="usd20" type="radio" name="a3" value="20.00">
+			<label for="usd20">$20
+			</label><input id="usd10" type="radio" name="a3" value="10.00" checked>
+			<label for="usd10">$10
+			</label><input id="usd5" type="radio" name="a3" value="5.00">
+			<label for="usd5">$5</label>
+		</fieldset>
+		<input type="image" src="https://www.paypal.com/images/x-click-but20.gif" name="submit" alt="PayPal Subscribe">
+		<input type="hidden" name="p3" value="1">
+		<input type="hidden" name="t3" value="M">
+		<input type="hidden" name="src" value="1">
+		<input type="hidden" name="sra" value="1">
+	</form>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<h5 style="color:black">Or set your own amount:</h5>
+		<input type="hidden" name="cmd" value="_xclick-subscriptions">
+		<input type="hidden" name="business" value="ian@freenetproject.org">
+		<input type="hidden" name="item_name" value="Freenet Project Membership">
+		<input type="hidden" name="return" value="https://freenetproject.org/donatethanks.html">
+		<input type="hidden" name="cancel_return" value="https://freenetproject.org/donate.html">
+		<input type="hidden" name="no_shipping" value="1">
+		<input type="hidden" name="no_note" value="1">
+		<input type="hidden" name="currency_code" value="USD">
+		<div class="row">
+		<div class="col-xs-10 col-sm-10 col-md-9 col-lg-10">
+			<div class="input-group">
+			<span class="input-group-addon">$</span>
+			<input type="number" name="a3" class="form-control" aria-label="Custom amount" value="10.00" min="5" required>
+			</div>
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-3 col-lg-2">
+			<input type="image" src="https://www.paypal.com/images/x-click-but20.gif" name="submit" alt="PayPal Subscribe">
+		</div>
+		</div>
+		<input type="hidden" name="p3" value="1">
+		<input type="hidden" name="t3" value="M">
+		<input type="hidden" name="src" value="1">
+		<input type="hidden" name="sra" value="1">
+	</form>
+</div>
+<div class="formgroup">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<h4 class="panel-title">Make a donation</h4>
+	<h5 style="color:black">Choose your one-time donation:</h5>
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="ian@freenetproject.org">
+	<input type="hidden" name="item_name" value="Freenet Donation">
+	<input type="hidden" name="no_shipping" value="1">
+	<input type="hidden" name="return" value="https://freenetproject.org/donatethanks.html">
+	<input type="hidden" name="cancel_return" value="https://freenetproject.org/donate.html">
+	<input type="hidden" name="currency_code" value="USD">
+	<fieldset>
+		<input id="usd500" type="radio" name="amount" value="500.00">
+		<label for="usd500">$500
+		</label><input id="usd100" type="radio" name="amount" value="100.00">
+		<label for="usd100">$100
+		</label><input id="usd50-2" type="radio" name="amount" value="50.00">
+		<label for="usd50-2">$50
+		</label><input id="usd20-2" type="radio" name="amount" value="20.00">
+		<label for="usd20-2">$20
+		</label><input id="usd10-2" type="radio" name="amount" value="10.00" checked>
+		<label for="usd10-2">$10
+		</label><input id="usd5-2" type="radio" name="amount" value="5.00">
+		<label for="usd5-2">$5
+		</label>
+	</fieldset>
+	<div class="col-xs-2 col-sm-2 col-md-3 col-lg-2">
+		<input type="image" src="{{ site.baseurl }}/images/paypal-submit.gif" name="submit" alt="PayPal Donate">
+	</div>
+</form>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<h5 style="color:black">Or set your own amount:</h5>
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="ian@freenetproject.org">
+	<input type="hidden" name="item_name" value="Freenet Donation">
+	<input type="hidden" name="no_shipping" value="1">
+	<input type="hidden" name="return" value="https://freenetproject.org/donatethanks.html">
+	<input type="hidden" name="cancel_return" value="https://freenetproject.org/donate.html">
+	<input type="hidden" name="currency_code" value="USD">
+	<div class="row">
+	<div class="col-xs-10 col-sm-10 col-md-9 col-lg-10">
+		<div class="input-group">
+		<span class="input-group-addon">$</span>
+		<input type="number" name="amount" class="form-control" aria-label="Custom amount" value="10.00" required>
+		</div>
+	</div>
+	<div class="col-xs-2 col-sm-2 col-md-3 col-lg-2">
+		<input type="image" src="{{ site.baseurl }}/images/paypal-submit.gif" name="submit" alt="PayPal Donate">
+	</div>
+	</div>
+</form>
+</div>

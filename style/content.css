@@ -1,75 +1,58 @@
-
-/*
-
-Colors:
-
-Blue
-rgb(65, 106, 179)
-rgb(64, 102, 171) << eyedropper
-
-Dark Blue
-rgb(27, 62, 125)
-rgb(34, 60, 109) << eyedropper
-
-Light Blue
-rgb(33, 144, 193)
-
-Light blue desaturated
-rgb(120, 148, 199)
-
-Light Grey 
-1
-rgb(183, 185, 190)
-2 bluer
-rgb(163, 175, 178)
-
-Dark Grey
-rgb(81, 88, 98)
-
-Bluish off-white
-rgb(243, 246, 246)
-
-Orange...
-rgb(249, 133, 97)
- 
- */
+blockquote {
+	font-style: italic;
+}
 
 body a {
 	text-decoration: none;
-	color: white;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	/*font-family: 'Myriad Pro', "myriad-pro", 'PT Sans', 'Lucida Sans', 'Segoe UI', 'Calibri',  sans-serif;*/
 	font-family: 'PT Sans', 'Lucida Sans', 'Segoe UI', 'Calibri',  sans-serif;
+	overflow-x: hidden;
 }
 
-body > div {
+body > div:first-of-type {
 	color:  #fafbfc;
 	box-sizing: border-box;
-
-	background: url('../images/graph-white.png'), linear-gradient(to bottom, #1b3e7d 0%,#416ab3 100%);
-	background-repeat: no-repeat;
-	background-position: top right;
 	/*background-color: rgb(65, 106, 179);*/
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b3e7d', endColorstr='#416ab3',GradientType=0 ); */
 	padding-bottom: 1em;
 }
 
+/*
+ * "What's freenet" margin is leaking because it's a block element. Inline block is a bad fix, what's the correct approach here?
+ * padding this inside of the section would work but is hacky af
+ */
+body > div:nth-of-type(2) {
+	background: url('../images/graph-grey.png');
+	background-repeat: no-repeat;
+	background-position: left -5em;
+	padding-top: 3em; /* XXX: Hack! "Fixes" h2 margin extending beyond the containing div. Both margin and padding do not collapse but add */
+	padding-top: 1px; /* XXX: Alternative hack. non-zero margin contains the h2 */
+	padding-bottom: 1em;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	text-align: center;
 	font-family: BebasNeueBold, "bebas-neue", sans-serif;
+}
+
+main h1, h2, h3, h4, h5, h6 {
+	color: #416ab3;
+}
+
+h1, h2 {
+	font-weight: 700;
 }
 
 nav {
 	font-family: BebasNeueBold, "bebas-neue", sans-serif;
 	color:  #fafbfc;
 	font-size: 17.69px;/* Approximation due to font substitution */
-	font-weight: 400;
+	/* font-weight: 400; */
 	/*line-height: 26px;*/
-	padding: 1em 1em 1em 1em;
+	padding: 1em 1em 1em 6em;
 	/*text-align: center;*/
 }
 
@@ -77,12 +60,6 @@ nav:before {
 	display: inline-block;
 	vertical-align:middle;
 	content: url('../images/logo-small.png');
-}
-
-nav:after {
-	display: block;
-	margin-left: 2em;
-	content: url('../images/greeble-white.png');
 }
 
 nav a {
@@ -93,56 +70,11 @@ nav a {
 	color:  #fafbfc;
 	margin-left: 0.75em;
 	font-size: 104%;
-	/*transform: scaleX(1.0426);*//* width and height properties ommitted due to transform */
+	font-weight: 700;
 }
 
 nav a.current {
 	color: rgb(120, 148, 199);
-}
-
-/*.social {
-	width: 118px;
-	height: 12px;
-}*/
-
-/* FIXME: do sprite sheet for social buttons */
-/*.social {
-	display: block;
-	background: url('../images/social-white.png') no-repeat;
-}*/
-
-.social a {
-	display: inline-block;
-	/*background-color: white;*/
-	width: 12px;
-	height: 12px;
-	text-indent: -9999px;
-	/*content: " ";*/
-}
-
-.social a[href*="facebook.com"] {
-	background: url('../images/social-white.png') no-repeat;
-}
-
-.social a[href*="twitter.com"] {
-	background: url('../images/social-white.png') no-repeat 20%;
-}
-
-.social a[href*="pinterest.com"] {
-	background: url('../images/social-white.png') no-repeat 80%;
-}
-
-.social a[href*="instagram.com"] {
-	background: url('../images/social-white.png') no-repeat 40%;
-}
-
-.social a[href*="youtube.com"] {
-	background: url('../images/social-white.png') no-repeat 60%;
-}
-
-.social a[href*="plus.google.com"] {
-	background: url('../images/social-white.png') no-repeat 100%;
-	width: 15px;
 }
 
 .logo {
@@ -152,6 +84,14 @@ nav a.current {
 
 body > div > header {
 	color:  #fafbfc;
+	/*min-height: 80px;*/
+}
+
+body > div:first-of-type {
+	min-height: 6em;
+	min-height: 5em;
+	min-height: 3em;
+	/*padding-bottom: 0px;*/
 }
 
 body > div > header h1 {
@@ -166,14 +106,18 @@ body > div > header h1 {
 body > div > header h1:before {
 	display: block;
 	content: url('../images/logo-large.png');
+	max-width: 100%;
+	box-sizing: border-box;
+	margin-bottom: -88px;
 }
 
+/* TODO: medium logo? */
+
 body > div > .social {
-	position: absolute;
 	float: right;
 	margin-top: 1em;
 	margin-right: 5em;
-	/*right: 5em;
+	/*right: 3em;
 	top: 1em;*/
 }
 
@@ -187,9 +131,9 @@ body > div > header p {
 	text-align: center;
 }
 
-section p,
-section blockquote,
-section cite {
+section > p,
+section > blockquote,
+section > cite {
 	text-align: center;
 }
 
@@ -224,9 +168,8 @@ section cite {
 	/*font-family: BebasNeueRegular;*/
 	color:  #fcfafa;
 	font-size: 24.51px;/* Approximation due to font substitution */
-	font-weight: 400;
+	/* font-weight: 400; */
 	text-align: center;
-	transform: scaleY(1.0038);/* width and height properties ommitted due to transform */
 	/*font-family: 'Myriad Pro', "myriad-pro", 'PT Sans', 'Lucida Sans', 'Segoe UI', 'Calibri',  sans-serif;*/
 	font-family: 'PT Sans', 'Lucida Sans', 'Segoe UI', 'Calibri',  sans-serif;
 }
@@ -238,17 +181,15 @@ font-size: 14.71px;
 font-weight: 400;
 line-height: 15px;
 text-align: center;
-transform: scaleY(1.0038);/* width and height properties ommitted due to transform */
 }
 
 section h2 {
 	/*font-family: BebasNeueBold, "bebas-neue", "sans-serif";*/
 	color:  #416ab3;
 	font-size: 40px;/* Approximation due to font substitution */
-	font-weight: 400;
+	/*font-weight: 400;*/
 	text-align: center;
 	line-height: 39.901px;/* Approximation due to font substitution */
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #actions {
@@ -257,15 +198,9 @@ section h2 {
 	justify-content: space-around;
 }
 
-#actions div {
-	/*width: 20%;
-	display: inline-block;*/
-}
-
 #actions h2 {
 	color:  #fcfafa;
 	font-size: 24.51px;
-	transform: scaleY(1.0038);/* width and height properties ommitted due to transform */
 	margin-bottom: 0px;
 }
 
@@ -273,12 +208,11 @@ section h2 {
 #actions a {
 	color:  rgba(249, 250, 251, 0.5);
 	font-size: 14.71px;
-	font-weight: 400;
+	/*font-weight: 400;*/
 	line-height: 15px;
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 0.25em;
-	/* transform: scaleY(1.0038); */
 }
 
 #actions a {
@@ -289,9 +223,8 @@ section h2 {
 /*font-family: BebasNeueBold;*/
 color:  #416ab3;
 font-size: 40px;/* Approximation due to font substitution */
-font-weight: 400;
+/* font-weight: 400; */
 line-height: 39.901px;/* Approximation due to font substitution */
-transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #whatsfreenet a {
@@ -300,7 +233,6 @@ transform: scaleY(1.0004);/* width and height properties ommitted due to transfo
 	font-size: 17px;
 	font-weight: 600;
 	text-align: center;
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #whatsfreenet a:before {
@@ -323,17 +255,15 @@ transform: scaleY(1.0004);/* width and height properties ommitted due to transfo
 	/*font-family: BebasNeueBold;*/
 	color:  #1b3e7d;
 	font-size: 40px;/* Approximation due to font substitution */
-	font-weight: 400;
+	/* font-weight: 400; */
 	line-height: 39.901px;/* Approximation due to font substitution */
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #features p {
-	font-weight: 400;
+	/* font-weight: 400; */
 	text-align: center;
-	width: 800px;
+	max-width: 800px;
 	margin: auto;
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #features h3 {
@@ -341,7 +271,6 @@ transform: scaleY(1.0004);/* width and height properties ommitted due to transfo
 	font-size: 17px;
 	font-weight: 600;
 	text-align: center;
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #features ul h3:before {
@@ -366,53 +295,55 @@ transform: scaleY(1.0004);/* width and height properties ommitted due to transfo
 }
 
 #features li p {
-/*font-family: 'Myriad Pro';*/
 color:  #515862;
 font-size: 11px;
-font-weight: 400;
+/* font-weight: 400; */
 line-height: 15px;
 text-align: center;
 width: 240px;
-transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #news {
 	min-height: 430px;
-	/*background-color: rgb(183, 185, 190); too dark */
-	/*background-color: rgb(243, 246, 246); close but too light */
-	/*background-color: rgb(248, 249, 250);*/
-	background-color: rgb(242, 242, 243);
+	background-color: rgb(242, 242, 243); /* matches eyedropper */
 
 	margin-top: 5em;
 	padding-top: 4em;
+	padding-bottom: 4em;
 }
 
 #news p {
-	width: 640px;
+	max-width: 640px;
 	margin: auto;
+}
+
+#news li {
+	margin: 1em;
+	text-align: left;
 }
 
 #news ol li h3 {
 	color:  #416ab3;
-	text-align: left;
 	font-size: 17px;
-	font-weight: 600;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: -0.25em;
+	font-family: 'PT Sans', 'Lucida Sans', 'Segoe UI', 'Calibri',  sans-serif;
 }
 
 #news ol li p {
 	color:  #515862;
 	font-size: 11px;
-	font-weight: 400;
+	/* font-weight: 400; */
 	line-height: 15px;
 	width: auto;
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
+	margin-top: 1em;
 }
 
 #news ol li time {
 	color:  #416ab3;
 	font-size: 12px;
 	font-weight: 600;
-	transform: scaleY(1.0004);/* width and height properties ommitted due to transform */
 }
 
 #news li {
@@ -421,21 +352,13 @@ transform: scaleY(1.0004);/* width and height properties ommitted due to transfo
 
 #news a {
 	display: inline-block;
+	margin-top: 2em;
 	background: rgb(65, 106, 179);
 	border-radius: 2px 2px 2px 2px;
 	padding: 0px 1ex 0px 1ex;
 	color: white;
 	font-size: 9px;
 	line-height: 20px;
-}
-
-ul, ol {
-	padding: 0 0 0 0;
-}
-
-ol li,
-ul li {
-	display: block;
 }
 
 #news ol,
@@ -491,10 +414,37 @@ ul li {
 	content: url('../images/endorsement-blue.png');
 }	
 
+main {
+	padding: 1em;
+}
+
+body main a {
+	color:  #416ab3;
+}
+
+ol li p:first-of-type {
+	font-family: BebasNeueBold, "bebas-neue", sans-serif;
+	color:  #416ab3;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+ol li p:only-of-type {
+	font-family: inherit;
+	color:  inherit;
+	font-size: inherit;
+	font-weight: inherit;
+
+}
+
+dt {
+	font-weight: 700;
+}
+
 footer {
-	display: flex;
+	/*display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-between;*/
 	width: 100%;
 	margin: 0px;
 	min-height: 252px;
@@ -505,6 +455,20 @@ footer {
 	color: white;
 }
 
+footer header,
+footer #contact {
+	float: left;
+	clear: left;
+}
+
+footer .social {
+	float: right;
+}
+
+footer .social li {
+	display: inline-block;
+}
+
 footer h2:before {
 	display: inline-block;
 	content: url('../images/logo-small.png');
@@ -512,10 +476,61 @@ footer h2:before {
 
 footer h2 {
 	text-align: left;
+	font-size: 40px;
+	line-height: 26px; /* FIXME Eh?... */
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: white;
+}
+
+footer header p {
+	text-align: center;
+	margin-top: 0px;
 }
 
 footer #contact > * {
 	display: block;
+}
+
+footer #copyright:before {
+	display: block;
+	/* FIXME: height and width necessary? */
+	width: 1px;
+	height: 1px;
+	content: ' ';
+	/* FIXME: note that toc is floated left, so this clear is pushing it waaayyyyyyy down*/
+	clear: both;
+}
+
+footer form,
+footer #copyright {
+	display: block;
+	/*position: absolute;
+	left: 30%;*/
+	/* FIXME: below a certain size this should be 100% */
+	margin-left: 30%;
+	width: 30%;
+}
+
+footer a {
+	color: white;
+}
+
+footer .stats li:first-of-type:before {
+	display: none;
+}
+
+footer .stats li:before {
+	display: inline;
+	content: ' | ';
+}
+
+@media only screen and (min-width : 1024px) {
+	body > div {
+		background: url('../images/graph-white.png'), linear-gradient(to bottom, #1b3e7d 0%,#416ab3 100%);
+		background-repeat: no-repeat;
+		background-position: top right;
+	}
 }
 
 @media only screen and (max-width : 1024px) {
@@ -525,58 +540,50 @@ footer #contact > * {
 	}
 }
 
-/*
-font-family: ArialNarrow;
-color:  #416ab3;
-font-size: 25px;
-font-weight: 400;
-text-align: left;
+@media only screen and (max-width : 480px) {
+	footer h2 {
+		text-align: center;
+	}
 
-font-family: ArialNarrow;
-color:  #7c7c7e;
-font-size: 18px;
-font-weight: 400;
-text-align: left;
+	footer form,
+	footer #copyright {
+		margin-left: inherit;
+		width: inherit;
+	}
 
-font-family: ArialNarrow;
-color:  #1f2022;
-font-size: 20px;
-font-weight: 400;
-text-align: left;
+	nav {
+		padding: 1em 1em 1em 1em;
+	}
 
-font-family: ArialNarrow;
-color:  #212225;
-font-size: 20px;
-font-weight: 400;
-text-align: left;
+	.social {
+		margin: 0px 0px 0px 0px;
+	}
 
-font-family: ArialNarrow;
-color:  #29292a;
-font-size: 18px;
-font-weight: 400;
-text-align: left;
-*/
+	body > div > .social {
+		float: right;
+		margin-top: 1em;
+		margin-right: 1em;
+	}
+	footer {
+		padding-left: inherit;
+		padding-right: inherit;
+	}
 
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+	footer header,
+	footer .social,
+	footer form {
+		float: none;
+		text-align: center;
+	}
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
+@media only screen and (max-width : 600px) {
+	footer #contact,
+	footer #copyright,
+	footer form {
+		float: none;
+		text-align: center;
+		width: 100%;
+		margin-left: none;
+	}
 }
