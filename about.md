@@ -455,5 +455,5 @@ and most implemented ideas have been discussed in detail on [the mailing
 lists](help.html#mailing-lists) at some point, more recently often in-Freenet
 forums such as FMS, or [the bug tracker](https://bugs.freenetproject.org/).
 
-[icon_pdf]: assets/img/small-n-flat/file-pdf.png
-[icon_video]: assets/img/small-n-flat/file-video.png
+[icon_pdf]: {{ site.baseurl }}/assets/img/small-n-flat/file-pdf.png
+[icon_video]: {{ site.baseurl }}/assets/img/small-n-flat/file-video.png
