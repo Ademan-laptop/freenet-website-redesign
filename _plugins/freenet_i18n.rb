@@ -9,12 +9,6 @@ def strip_heredoc(s)
 end
 
 class GetTextTag < Liquid::Block
-	def get_locale(context)
-		page = context.registers[:page]
-
-		return page[:locale] || context.registers[:site].config['locale'] || 'en'
-	end
-
 	# FIXME there must be a better way to initialize global state
 	def get_translation(context)
 		page = context.registers[:page]
