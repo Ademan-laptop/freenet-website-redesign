@@ -15,8 +15,8 @@ Steps:
 * [Start using Freenet!][usage]
 
 [autostart]: #autostart
-[add_friends]: #note
-[usage]: #usage
+[add_friends]: #add-friends-or-connect-to-strangers
+[usage]: #using-freenet
 
 *Freenet is free and open source software available under GPLv2+. The source code is on [GitHub](https://github.com/freenet/fred).*
 
@@ -136,7 +136,7 @@ but many Freenet users and developers use them.
 ### Firewalls and routers
 
 Freenet should work fine with most routers, but if you are having problems
-and you have a firewall or router, click [**here**](help.html#firewall) for
+and you have a firewall or router, click [**here**]({{ site.baseurl }}/help/#How-do-I-get-Freenet-working-with-a-Firewall-NAT) for
 some info.
 
 ### So it's running, what do I do?
@@ -180,9 +180,9 @@ micro-blogging (Sone, a bit like twitter).
 If you have problems installing or running Freenet, please see the [knowledge base][kb_url], [FAQ][faq_url], [chat][chat_url], or [mailing list][ml_url].
 
 [kb_url]: https://freenetproject.tenderapp.com/kb
-[faq_url]: help.html#faq
-[chat_url]: help.html#irc
-[ml_url]: help.html#mailing-lists
+[faq_url]: {{ site.baseurl }}/help/#faq
+[chat_url]: {{ site.baseurl }}/help/#irc
+[ml_url]: {{ site.baseurl }}/help/#mailing-lists
 
 ### Hardware requirements
 

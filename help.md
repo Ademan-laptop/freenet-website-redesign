@@ -15,7 +15,7 @@ complete anonymity. Nobody controls Freenet, not even its creators, meaning
 that the system is not vulnerable to manipulation or shutdown. Freenet
 is also very efficient in how it deals with information, adaptively
 replicating content in response to demand.  For more information,
-see [What is Freenet?](about.html#introduction)
+see [What is Freenet?]({{ site.baseurl }}/about#introduction)
 
 ### How is Freenet different to Tor? Can I access Google/Facebook/etc through Freenet?
 
@@ -225,7 +225,7 @@ secretly distribute a trojan'ed build, because Freenet is open source,
 numerous people have contributed code to it, so legally we have to give you
 the source code, including that for any government mandated back doors -
 which wouldn't be secret for long! If this happened it is likely that [
-Freenet Project Incorporated](donate.html), the non-profit organisation that
+Freenet Project Incorporated]({{ site.baseurl }}/donate/), the non-profit organisation that
 runs this website and handles donations, would shut down, but the Freenet
 network itself would live on just fine, the only difference being not being
 able to pay full time developers as easily.
@@ -236,7 +236,7 @@ the politics of all this and how you can stop such laws.
 
 ### Can I get trouble if I run a node?
 
-This is related to ["Is Freenet legal?"](#legal). We have done everything we
+This is related to ["Is Freenet legal?"](#is-freenet-legal). We have done everything we
 can to make it extremely difficult for any sane legal system to justify
 punishing someone for running a Freenet node, and there is little precedent
 for such action in today's developed countries. Many legal systems recognize
@@ -255,8 +255,8 @@ work could get you into trouble too, unless it's for work purposes!
 
 There are some excellent thoughts on this subject on the [Philosophy](
 about.html#philosophy) page. Specific copyright-related laws may be a
-problem, please read [Is Freenet legal?](#legal) and [Is Freenet blocked by
-national firewalls?](#blocked).
+problem, please read [Is Freenet legal?](#is-freenet-legal) and [Is Freenet blocked by
+national firewalls?](#is-freenet-blocked-by-national-firewalls).
 
 ### What about child porn, offensive content or terrorism?
 

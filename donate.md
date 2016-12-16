@@ -22,7 +22,7 @@ Send your donations to **1966U1pjj15tLxPXZ19U48c99EJDkdXeqb**.
 * Alternatively, please contact us at {{site.donate_email}} if you cannot use any of these payment methods.
 
 [url_bitcoin]: http://www.bitcoin.org/
-[logo_bitcoin]: assets/img/BC_nBG_48px.png
+[logo_bitcoin]: {{ site.baseurl }}/assets/img/BC_nBG_48px.png
 [url_zazzle_store]: http://www.zazzle.com/freenetproject
 [url_salt_bountysource]: https://salt.bountysource.com/teams/freenet
 
@@ -48,7 +48,6 @@ The Freenet Project Inc is registered under EIN `95-4864038`
 
 # Why donate
 
-<span class="e-mail" data-user="etanod" data-website="gro.tcejorpteneerf"></span>
 Although countless people have given their time and skill to the project since its inception, 
 The Freenet Project relies on your donations to cover hosting and administrative costs 
 (i.e. domain registrations and certificates).
@@ -77,11 +76,9 @@ Help us keep Internet freedom alive and expand human liberty.
 
 All support is very much appreciated.
 
-[url_fundraiser]: news.html#20151212-donation-appeal
+[url_fundraiser]: {{ site.baseurl }}/2015/12/12/donations.html
 
 # Sponsors
-
-        <span class="e-mail" data-user="etanod" data-website="gro.tcejorpteneerf"></span>
 
 The following persons, organisations and companies have generously sponsored
 this project through donations or discounts on hardware and services:

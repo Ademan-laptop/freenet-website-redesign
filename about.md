@@ -8,7 +8,7 @@ permalink: /about/
 {:toc}
 
 
-## What is Freenet?
+## {% gettext %}What is Freenet?{% endgettext %}
 
 > I worry about my child and the Internet all the time, even though she's too
 > young to have logged on yet. Here's what I worry about. I worry that 10 or
@@ -17,16 +17,21 @@ permalink: /about/
 
 --Mike Godwin, [Electronic Frontier Foundation](https://www.eff.org/)
 
+{% gettext %}
 Freenet is free software which lets you anonymously share files, browse and
 publish "freesites" (web sites accessible only through Freenet) and chat on
 forums, without fear of censorship. Freenet is decentralised to make it less
 vulnerable to attack, and if used in "darknet" mode, where users only connect to
 their friends, is very difficult to detect.
+{% endgettext %}
 
+{% gettext %}
 Communications by Freenet nodes are encrypted and are routed through other
 nodes to make it extremely difficult to determine who is requesting the
 information and what its content is.
+{% endgettext %}
 
+{% gettext %}
 Users contribute to the network by giving bandwidth and a portion of their
 hard drive (called the "data store") for storing files. Files are
 automatically kept or deleted depending on how popular they are, with the
@@ -35,7 +40,9 @@ Files are encrypted, so generally the user cannot easily discover what is in
 his datastore, and hopefully can't be held accountable for it. Chat forums,
 websites, and search functionality, are all built on top of this distributed
 data store.
+{% endgettext %}
 
+{% gettext %}
 Freenet has been downloaded over 2 million times since the project started,
 and used for the distribution of censored information all over the world
 including countries such as China and in the Middle East. Ideas and concepts
@@ -46,13 +53,16 @@ to Citeseer, and Freenet has also inspired papers in the worlds of law and
 philosophy. Ian Clarke, Freenet's creator and project coordinator,
 was selected as one of the top 100 innovators of 2003 by MIT's Technology
 Review magazine.
+{% endgettext %}
 
+{% gettext %}
 An important recent development, which very few other networks have, is the
 "darknet": By only connecting to people they trust, users can greatly reduce
 their vulnerability, and yet still connect to a global network through their
 friends' friends' friends and so on. This enables people to use Freenet even
 in places where Freenet may be illegal, makes it very difficult for
 governments to block it, and does not rely on tunneling to the "free world".
+{% endgettext %}
 
 
 [comment]: # Translators: do not translate the anchors such as "#prior_reading"
@@ -72,45 +82,57 @@ governments to block it, and does not rely on tunneling to the "free world".
 
 ## The Philosophy Behind Freenet
 
-1. A Disclaimer
+1. ### A Disclaimer
 
+    {% gettext %}
     There are many reasons why people get involved in the Freenet Project. Some
     share the views outlined in this document; some share variations of these views,
     which are also served by what we are trying to achieve; and some just enjoy the
     technical challenge. These are the ideas which motivated me to architect the
     system in the first place, but not necessarily the views that everyone involved
     in the Freenet Project holds.
+    {% endgettext %}
 
-2. Suggested prior reading
 
+2. ### Suggested prior reading
+
+    {% gettext %}
     For this document to make sense, you should probably know what Freenet is. You
-    can get a good overview from [What is Freenet?](about.html#introduction).
+    can get a good overview from [What is Freenet?]({{ site.baseurl }}/about/#introduction).
+    {% endgettext %}
 
-3. The importance of the Free flow of information
+3. ### The importance of the Free flow of information
 
+    {% gettext %}
     Freedom of speech, in most western cultures, is generally considered to be one
     of the most important rights any individual might have. Why is the freedom to
     share ideas and opinions so important? There are several ways to answer this
     question.
+    {% endgettext %}
 
-    1. Communication is what makes us human
+    1. #### Communication is what makes us human
 
+        {% gettext %}
         One of the most obvious differences between mankind and the rest of the animal
         kingdom is our ability to communicate sophisticated and abstract concepts. While
         we constantly discover that animal's communication ability is more sophisticated
         than previously assumed, it is unlikely that any other animal approaches our own
         level of ability in this area.
+        {% endgettext %}
 
-    2. Knowledge is good
+    2. #### Knowledge is good
 
+        {% gettext %}
         Most people, given the option of knowing something and not knowing something,
         will choose to have more information rather than less. Wars have been won and
         lost over who was better-informed. This is because being better-informed allows
         us to make better decisions, and generally improve our ability to survive and be
         successful.
+        {% endgettext %}
 
-    3. Democracy assumes a well informed population
+    3. #### Democracy assumes a well informed population
 
+        {% gettext %}
         Many people today live under democratic governments, and those who don't,
         probably want to. Democracy is an answer to the question of how to create
         leaders, while preventing them from abusing that power. It achieves this by
@@ -120,9 +142,11 @@ governments to block it, and does not rely on tunneling to the "free world".
         it must know what their government is doing, they must be well informed. It
         is a feedback loop, but this loop can be broken if the government has the
         power to control the information the population has access to.
+        {% endgettext %}
 
-4. Censorship and freedom
+4. ### Censorship and freedom
 
+    {% gettext %}
     Everyone values their freedom, in fact, many consider it so important that
     they will die for it. People like to think that they are free to form and
     hold whatever opinions they like, particularly in western countries. Consider
@@ -134,16 +158,19 @@ governments to block it, and does not rely on tunneling to the "free world".
     so, that people now take it for granted, despite the fact that this
     undermines the very democratic principles which justify the government's
     existence in the first place.
+    {% endgettext %}
 
-5. The solution
+5. ### The solution
 
+    {% gettext %}
     The only way to ensure that a democracy will remain effective is to ensure
     that the government cannot control its population's ability to share
     information, to communicate. So long as everything we see and hear is
     filtered, we are not truly free. Freenet's aim is to allow two or more people
     who wish to share information, to do so.
+    {% endgettext %}
 
-6. Isn't censorship sometimes necessary?
+6. ### Isn't censorship sometimes necessary?
 
     Of course no issue is black and white, and there are many who feel that
     censorship is a good thing in some circumstances. For example, in some
@@ -169,7 +196,7 @@ governments to block it, and does not rely on tunneling to the "free world".
     even if you didn't accept the second. Basically, you either have censorship,
     or you don't. There is no middle-ground.
 
-7. But why is anonymity necessary?
+7. ### But why is anonymity necessary?
 
     You cannot have freedom of speech without the option to remain anonymous.
     Most censorship is retrospective, it is generally much easier to curtail free
@@ -181,7 +208,7 @@ governments to block it, and does not rely on tunneling to the "free world".
     learn to trust. Freenet incorporates a mechanism called "subspaces" to
     facilitate this.
 
-8. And what of copyright?
+8. ### And what of copyright?
 
     Of course much of Freenet's publicity has centered around the issue of
     copyright, and thus I will speak to it briefly. The core problem with
@@ -195,7 +222,7 @@ governments to block it, and does not rely on tunneling to the "free world".
     It is for this reason that Freenet, a system designed to protect Freedom of
     Speech, must prevent enforcement of copyright.
 
-9. But how will artists be rewarded for their work without copyright?
+9. ### But how will artists be rewarded for their work without copyright?
 
     Firstly, even if copyright were the only way that artists could be rewarded
     for their work, then I would contend that freedom is more important than
@@ -210,7 +237,7 @@ governments to block it, and does not rely on tunneling to the "free world".
     middle-men to gain control over the mechanisms of distribution, to the
     detriment of both artists and the public.
 
-10. Alternatives to Copyright
+10. ### Alternatives to Copyright
 
     Fortunately it won't come to this. There are many alternative ways to reward
     artists. The simplest is voluntary payment. This is an extension of the
@@ -360,7 +387,7 @@ the project on business and publicity matters.
 
 Dave Baker
 
-: Dave's main contribution has been [Freemail](documentation.html#freemail),
+: Dave's main contribution has been [Freemail]({{ site.baseurl }}/documentation/#freemail),
 his Summer of Code project to build a working email-over-Freenet system,
 as well as some debugging and core work in various places.
 
@@ -377,15 +404,15 @@ the FProxy stats page and Node 2 Node Messages (N2NM/N2NTMs).
 
 And **hundreds of others**, who either haven't asked to be added here, who
 prefer to remain nameless, or who we just haven't got around to thanking. Not to
-mention thousands of users, testers, and [donors](donate.html#sponsors)!
+mention thousands of users, testers, and [donors]({{ site.baseurl }}/donate/#sponsors)!
 
 ### Papers
 
-![][icon_pdf] [Measuring Freenet in the Wild: Censorship-resilience under Observation](assets/papers/roos-pets2014.pdf) (PDF)  
+![][icon_pdf] [Measuring Freenet in the Wild: Censorship-resilience under Observation]({{ site.baseurl }}/assets/papers/roos-pets2014.pdf) (PDF)  
 Observations and measurements on the live Freenet network. Includes suggestions
 for improvement. This was submitted to PETS 2014.
 
-![][icon_pdf] [The Dark Freenet](assets/papers/freenet-0.7.5-paper.pdf) (PDF)  
+![][icon_pdf] [The Dark Freenet]({{ site.baseurl }}/assets/papers/freenet-0.7.5-paper.pdf) (PDF)  
 Detailed paper about the Freenet 0.7.5 network, as opposed to its routing
 algorithm, which is detailed in the below papers. Includes some new
 simulations. This has been submitted to PET 2010.
@@ -394,34 +421,34 @@ simulations. This has been submitted to PET 2010.
 This is a video of a talk given by Ian Clarke and Oskar Sandberg at the Chaos
 Computer Congress in Berlin, December 2005, describing the (then) new
 architecture for Freenet 0.7\. You can also download the [slideshow](
-assets/papers/ccc-slideshow.pdf.bz2), and the source for the Java [demo](
-assets/papers/ccc-freenet-demo.tar.bz2) (requires Java 1.5).
+{{ site.baseurl }}/assets/papers/ccc-slideshow.pdf.bz2), and the source for the Java [demo](
+{{ site.baseurl }}/assets/papers/ccc-freenet-demo.tar.bz2) (requires Java 1.5).
 
-![][icon_pdf] [Searching in a Small World](assets/papers/lic.pdf) (PDF)  
+![][icon_pdf] [Searching in a Small World]({{ site.baseurl }}/assets/papers/lic.pdf) (PDF)  
 Oskar Sandberg's licentiate thesis describing a simple decentralized
 mechanism for constructing small world networks that is inspired by Freenet's
 original design. Part II of the thesis describes the basis for the new
 Darknet architecture.
 
-![][icon_pdf] [Distributed routing in Small World Networks](assets/papers/swroute.pdf) (PDF)  
+![][icon_pdf] [Distributed routing in Small World Networks]({{ site.baseurl }}/assets/papers/swroute.pdf) (PDF)  
 A paper by Oskar Sandberg describing the theoretical basis for the new
 "Darknet" routing mechanism employed by Freenet 0.7.
 
 ![][icon_pdf] Chaos Computer Congress Talk (slideshow)  
-This is a [slideshow](assets/papers/ccc-slideshow.pdf.bz2) for a talk given
+This is a [slideshow]({{ site.baseurl }}/assets/papers/ccc-slideshow.pdf.bz2) for a talk given
 at the Chaos Computer Congress on 30th Dec 2005 in Berlin, Germany by Ian
 Clarke and Oskar Sandberg. It described the new "darknet" approach to be
 employed in Freenet 0.7\. A Java demonstration to accompany the talk is [
-also](assets/papers/ccc-freenet-demo.tar.bz2) available.
+also]({{ site.baseurl }}/assets/papers/ccc-freenet-demo.tar.bz2) available.
 
-![][icon_pdf] [Switching for a small world](assets/papers/vilhelm_thesis.pdf) (PDF)  
+![][icon_pdf] [Switching for a small world]({{ site.baseurl }}/assets/papers/vilhelm_thesis.pdf) (PDF)  
 A thesis by Vilhelm Verendel exploring ways to optimise the swapping algorithm.
 
-![][icon_pdf] [Protecting Freedom of Information Online with Freenet](assets/papers/freenet-ieee.pdf) (PDF)  
+![][icon_pdf] [Protecting Freedom of Information Online with Freenet]({{ site.baseurl }}/assets/papers/freenet-ieee.pdf) (PDF)  
 An IEEE Internet Computing article describing the Freenet architecture circa
 2002 - probably the best introduction to the theory behind Freenet.
 
-![][icon_pdf] [FreeNet White Paper](assets/papers/ddisrs.pdf) (PDF)  
+![][icon_pdf] [FreeNet White Paper]({{ site.baseurl }}/assets/papers/ddisrs.pdf) (PDF)  
 Original white paper by Ian Clarke, Division of Informatics, University of
 Edinburgh 1999.
 
@@ -452,7 +479,7 @@ The most up to date reference is of course [the source code](
 https://github.com/freenet/fred), but there is also some useful documentation on
 [the wiki](https://wiki.freenetproject.org/) (you may have to search a bit),
 and most implemented ideas have been discussed in detail on [the mailing
-lists](help.html#mailing-lists) at some point, more recently often in-Freenet
+lists]({{ site.baseurl }}/help/#mailing-lists) at some point, more recently often in-Freenet
 forums such as FMS, or [the bug tracker](https://bugs.freenetproject.org/).
 
 [icon_pdf]: {{ site.baseurl }}/assets/img/small-n-flat/file-pdf.png
