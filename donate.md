@@ -4,30 +4,32 @@ title: Donate
 permalink: /donate/
 ---
 
-## How can I donate?
+## {% gt How can I donate? %}
 
-* You can donate using PayPal. For a recurring payment of $5 or more per month you can become a Freenet "member" (this requires a [PayPal](https://www.paypal.com/) account).
+* {% gettext %}You can donate using PayPal. For a recurring payment of $5 or more per month you can become a Freenet "member" (this requires a [PayPal](https://www.paypal.com/) account).
     Recurring donations give the project a more stable and dependable income which makes it easier to make long-term commitments to potential developers.
-    Alternatively you can make a one-time donation.
+    Alternatively you can make a one-time donation.{% endgettext %}
     {% include donate_paypal.html %}
 
 * ![][logo_bitcoin]
 You can donate using [Bitcoin][url_bitcoin].
 Send your donations to **1966U1pjj15tLxPXZ19U48c99EJDkdXeqb**.
 
-* You can also donate by purchasing items from the Freenet [store][url_zazzle_store].
+* {% gt You can also donate by purchasing items from the Freenet [store][url_zazzle_store]. %}
 
-* Or support us via [Salt at Bountysource][url_salt_bountysource].
+* {% gt Or support us via [Salt at Bountysource][url_salt_bountysource]. %}
 
-* Alternatively, please contact us at {{site.donate_email}} if you cannot use any of these payment methods.
+* {% gt Alternatively, please contact us at {{site.donate_email}} if you cannot use any of these payment methods. %}
 
 [url_bitcoin]: http://www.bitcoin.org/
 [logo_bitcoin]: {{ site.baseurl }}/assets/img/BC_nBG_48px.png
 [url_zazzle_store]: http://www.zazzle.com/freenetproject
 [url_salt_bountysource]: https://salt.bountysource.com/teams/freenet
 
-# The Freenet Non-Profit
+# {% gt The Freenet Non-Profit %}
+{% gettext %}
 All donations go to The Freenet Project Inc, a 501(c)(3) non-profit organization with the following mission statement:
+{% endgettext %}
 
 > The specific purpose of this corporation is to assist in developing and
 > disseminating technological solutions to further the open and democratic
@@ -41,25 +43,34 @@ All donations go to The Freenet Project Inc, a 501(c)(3) non-profit organization
 > this organization to educate the world community and be an advocate of
 > these purposes.
 
+{% gettext %}
 All funds received will only be utilized to advance our Mission Statement, and
 are administered at the direction of the Freenet Project Board.
+{% endgettext %}
 
+{% gettext %}
 The Freenet Project Inc is registered under EIN `95-4864038`
+{% endgettext %}
 
-# Why donate
+# {% gt Why donate %}
 
+{% gettext %}
 Although countless people have given their time and skill to the project since its inception, 
 The Freenet Project relies on your donations to cover hosting and administrative costs 
 (i.e. domain registrations and certificates).
 If we have enough funds, we can hire developers to work on Freenet.
+{% endgettext %}
 
+{% gettext %}
 Freenet is a platform for censorship-resistant communication and publishing. 
 For the past 15 years the project has built tools to fight for freedom of speech and information. 
 Our software provides a decentralized peer-to-peer network
 designed to hide who publishes or accesses potentially controversial 
 information - or even that it exists - especially useful
 for those living in oppressive political regimes.
+{% endgettext %}
 
+{% gettext %}
 While development is primarily driven by volunteers, 
 the project has also employed paid developers to provide more focused work. 
 Over the past 2 years, the project's paid developer has made great progress 
@@ -67,73 +78,108 @@ improving “Web of Trust” functionality to combat spam,
 which is a central problem in any anonymous system. 
 Unfortunately, the Freenet Project no longer has enough money to retain his services, 
 so he is now a volunteer. This greatly reduces his capacity to continue this important work.
+{% endgettext %}
 
+{% gettext %}
 We are excited for the future of Freenet and the projects built on top of it. 
 There is so much more work to do, and full-time developers greatly benefit the project.
+{% endgettext %}
 
+{% gettext %}
 Help us keep Internet freedom alive and expand human liberty.  
 [Learn more about our fundraiser.][url_fundraiser]
+{% endgettext %}
 
+{% gettext %}
 All support is very much appreciated.
+{% endgettext %}
 
 [url_fundraiser]: {{ site.baseurl }}/2015/12/12/donations.html
 
-# Sponsors
+# {% gt Sponsors %}
 
+{% gettext %}
 The following persons, organisations and companies have generously sponsored
 this project through donations or discounts on hardware and services:
+{% endgettext %}
 
 * [John Pozadzides][url_john_pozadzides]  
+{% gettext %}
 John is the founder of HTMLHelp.com and former Vice President of Sales for SAVVIS Communications.
 John has donated $10,000 to the Freenet Project to fund ongoing development of the Freenet software.
+{% endgettext %}
 
 * [Web Hosting Search][url_web_hosting_search]  
+{% gettext %}
 WebHostingSearch is a top rated guide to various world wide web hosting companies.
 Mr Chris Reynolds and the friendly team behind this company have become one of our proud promoters.
+{% endgettext %}
 
 * [John Gilmore][url_john_gilmore]  
+{% gettext %}
 John Gilmore is one of the founders of the Electronic Frontier Foundation, the Cypherpunks mailing list, and Cygnus Solutions.
 He created the alt.* hierarchy in Usenet and is a major contributor to the GNU project.
 He has donated $10,000.
+{% endgettext %}
 
 * [Bytemark Hosting][url_bytemark_hosting]  
+{% gettext %}
 Bytemark provides discounted hosting facilities to Freenet and comes with our highest recommendation.
+{% endgettext %}
 
 * [zoozle Torrent Search][url_zoozle]  
+{% gettext %}
 zoozle is a search engine for BitTorrent and P2P networks.
 It is also available in [german][url_zoozle_german] and [french][url_zoozle_french].
 They have donated $1,500.
+{% endgettext %}
 
 * [YourKit, LLC][url_yourkit]  
+{% gettext %}
 YourKit is kindly supporting Freenet by providing us a free of charge license of its full-featured Java Profiler.
 YourKit, LLC is the creator of innovative and intelligent tools for profiling Java applications.
 You can learn more about [YourKit Java Profiler][url_yourkit_profiler] following the link.
+{% endgettext %}
 
 * [Google][url_google]  
+{% gettext %}
 Google [open source][url_google_opensource] have three times donated $18,000, as well as paying for students to work with us over summer since 2006 through the [Google Summer of Code][url_google_soc] program.
+{% endgettext %}
 
 * [Finanzvergleich][url_finanzvergleich]  
+{% gettext %}
 Finanzvergleich is a German financial services comparison site, who have contributed $1,500.
+{% endgettext %}
 
 * [TopDir][url_topdir]  
+{% gettext %}
 TopDir is a human edited web directory with informations about interesting topics and websites in the German language.
+{% endgettext %}
 
 * [All Filters][url_allfilters] - another generous sponsor.
 
 * [A German Site for Gardening and Plants][url_gartenheinz] - another generous sponsor.
 
 * [Simple Car Rentals][url_simple_carrentals]  
+{% gettext %}
 Simple Car Rentals has generously supported Freenet by helping us with some of our administrative expenses over the years.
+{% endgettext %}
 
 * [The Sports Den][url_sportsden]  
+{% gettext %}
 The Sports Den has a wide variety of outdoor sports equipment, they are based in Ireland but can ship to the UK, Europe, and the United States.
+{% endgettext %}
 
 * ![][logo_intellij_idea]  
 [JetBrains][url_jetbrains] has kindly provided a license for the Ultimate edition of [IntelliJ IDEA][url_intellij_idea].
 
+{% gettext %}
 Freenet Project Inc does not necessarily endorse the business activities of all of the companies listed on this page.
+{% endgettext %}
 
+{% gettext %}
 Donation inquiries please contact Ian Clarke: <span class="e-mail" data-user="etanod" data-website="gro.tcejorpteneerf"></span>
+{% endgettext %}
 
 [url_john_pozadzides]: http://onemansblog.com/
 [url_web_hosting_search]: http://www.webhostingsearch.com/
