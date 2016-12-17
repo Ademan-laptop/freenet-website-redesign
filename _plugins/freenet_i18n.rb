@@ -8,37 +8,29 @@ def strip_heredoc(s)
 	s.gsub(/^[ \t]{#{indent}}/, '')
 end
 
-class GetTextTag < Liquid::Block
-	# FIXME there must be a better way to initialize global state
-	def get_translation(context)
-		page = context.registers[:page]
-		path = page['path']
-		pages = self.get_pages(context)
-
-		page = pages.first
-
-		if defined? page.locale
-			return page.locale
-		else
-			return nil
-		end
+def get_pages(context)
+	return context.registers[:site].pages.select do |p|
+		p.path == context['page']['path']
 	end
+end
 
-	def get_pages(context)
-		return context.registers[:site].pages.select do |p|
-			p.path == context['page']['path']
-		end
+def get_translation(context)
+	page = context.registers[:page]
+	path = page['path']
+	page = get_pages(context).first
+
+	if defined? page.locale
+		return page.locale
+	else
+		return nil
 	end
+end
 
-	def get_page(context)
-		self.get_pages(context).first
-	end
-
+class GetTextBlock < Liquid::Block
 	def render(context)
 		site = context.registers[:site]
-		page = context.registers[:page]
 
-		translation = self.get_translation(context)
+		translation = get_translation(context)
 
 		contents = super.to_s.gsub(%r!\A\s*(\n|\r)+|(\n|\r)+\s*\z!, "")
 		contents = strip_heredoc(contents)
@@ -53,6 +45,28 @@ class GetTextTag < Liquid::Block
 	end
 end
 
+class GetTextTag < Liquid::Tag
+	def initialize(tag_name, text, tokens)
+		super
+		@text = text
+	end
+
+	def render(context)
+		site = context.registers[:site]
+
+		translation = get_translation(context)
+
+		contents = strip_heredoc(@text.strip)
+
+		# TODO probably can be more concise translation[contents] || contents ?
+		if translation != nil && translation[contents]
+			return translation[contents].msgstr
+		else
+			return contents
+		end
+	end
+end
+
 class TranslatedPage < Jekyll::Page
 	attr_accessor :locale
 	def initialize(site, base, dir, name, localized_name, locale_name, locale)
@@ -61,7 +75,6 @@ class TranslatedPage < Jekyll::Page
 		@locale = locale
 
 		super(site, base, dir, name)
-		@name = name
 	end
 
 	def url
@@ -113,4 +126,5 @@ class GetTextGenerator < Jekyll::Generator
 	end
 end
 
-Liquid::Template.register_tag("gettext", GetTextTag)
+Liquid::Template.register_tag("gettext", GetTextBlock)
+Liquid::Template.register_tag("gt", GetTextTag)
