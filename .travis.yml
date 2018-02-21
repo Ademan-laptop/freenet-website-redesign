@@ -28,4 +28,4 @@ script: make html
 jobs:
   include:
       - stage: prepare cache
-        script: git submodule init pelican-plugins ; git submodule update pelican-plugins
+        script: git submodule init pelican-plugins ; git submodule update
