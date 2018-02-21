@@ -5,7 +5,7 @@ python: "2.7"
 sudo: false
 
 git:
-  submodules: true
+  submodules: false
 
 cache:
   pip: true
@@ -24,18 +24,6 @@ addons:
     - python-virtualenv
 
 script: make html
-
-deploy:
-  - provider: script
-    script: aws s3 sync --region=us-east-1 output/ s3://website-staging.freenetproject.org
-    skip_cleanup: true
-    on:
-      branch: 2016-redesign
-  - provider: script
-    script: aws s3 sync --region=us-east-1 output/ s3://website-freenetproject.org
-    skip_cleanup: true
-    on:
-      tags: true
 
 jobs:
   include:
